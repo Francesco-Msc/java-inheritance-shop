@@ -2,6 +2,8 @@ package org.lessons.java.cart;
 
 import java.util.Scanner;
 
+import org.lessons.java.products.Smartphone;
+
 public class Cart {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -19,6 +21,13 @@ public class Cart {
         System.out.println("IVA prodotto: ");
         int vat = input.nextInt();
 
+        if (typeOfProduct == 1) {
+            System.out.println("Imei prodotto: ");
+            int imei = input.nextInt();
+            System.out.println("Memoria prodotto (GB): ");
+            int memory = input.nextInt();
 
+            Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory);
+        }
     }
 }
