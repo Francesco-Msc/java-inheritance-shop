@@ -2,6 +2,7 @@ package org.lessons.java.cart;
 
 import java.util.Scanner;
 
+import org.lessons.java.products.Headphones;
 import org.lessons.java.products.Smartphone;
 import org.lessons.java.products.Televisions;
 
@@ -21,6 +22,7 @@ public class Cart {
         double price = input.nextDouble();
         System.out.println("IVA prodotto: ");
         int vat = input.nextInt();
+        input.nextLine();
 
         if (typeOfProduct == 1) {
             System.out.println("Imei prodotto: ");
@@ -32,10 +34,17 @@ public class Cart {
         } else if (typeOfProduct == 2) {
             System.out.println("Dimensioni prodotto (pollici):");
             int size = input.nextInt();
-            System.out.println("Smart tv? true/false");
+            System.out.println("La tv è una Smart tv? true/false");
             boolean smartTv = input.nextBoolean();
 
             Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv);
+        } else {
+            System.out.println("Colore del prodotto");
+            String color = input.nextLine();
+            System.out.println("Le cuffie sono wireless? true/false");
+            boolean cabled = input.nextBoolean();
+
+            Headphones headset = new Headphones(typeOfProduct, name, brand, price, vat, color, cabled);
         }
     }
 }
