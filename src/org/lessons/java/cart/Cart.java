@@ -3,6 +3,7 @@ package org.lessons.java.cart;
 import java.util.Scanner;
 
 import org.lessons.java.products.Smartphone;
+import org.lessons.java.products.Televisions;
 
 public class Cart {
     public static void main(String[] args) {
@@ -28,6 +29,13 @@ public class Cart {
             int memory = input.nextInt();
 
             Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory);
+        } else if (typeOfProduct == 2) {
+            System.out.println("Dimensioni prodotto (pollici):");
+            int size = input.nextInt();
+            System.out.println("Smart tv? true/false");
+            boolean smartTv = input.nextBoolean();
+
+            Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv);
         }
     }
 }
