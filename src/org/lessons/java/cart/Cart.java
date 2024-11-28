@@ -32,6 +32,7 @@ public class Cart {
 
             Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory);
             phone.phoneDetails();
+            System.out.println("Il prezzo ivato è: " + phone.formattedPrice());
         } else if (typeOfProduct == 2) {
             System.out.println("Dimensioni prodotto (pollici):");
             int size = input.nextInt();
@@ -40,6 +41,7 @@ public class Cart {
 
             Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv);
             tv.tvDetails();
+            System.out.println("Il prezzo ivato è: " + tv.formattedPrice());
         } else {
             System.out.println("Colore del prodotto");
             String color = input.nextLine();
@@ -48,6 +50,8 @@ public class Cart {
 
             Headphones headset = new Headphones(typeOfProduct, name, brand, price, vat, color, cabled);
             headset.headsetDetails();
+            System.out.println("Il prezzo ivato è: " + headset.formattedPrice());
         }
+        input.close();
     }
 }
