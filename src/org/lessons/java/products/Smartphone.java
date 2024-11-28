@@ -25,4 +25,8 @@ public class Smartphone extends Product {
     public void setMemory(int memory){
         this.memory = memory;
     }
+
+    public void phoneDetails(){
+        System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", IMEI: " + imei + ", Memoria: " + memory);
+    }
 }

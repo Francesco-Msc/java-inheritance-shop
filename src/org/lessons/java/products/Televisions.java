@@ -25,4 +25,8 @@ public class Televisions extends Product{
     public void setSmartTv(boolean smartTv){
         this.smartTv = smartTv;
     }
+
+    public void tvDetails(){
+        System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", Pollici: " + size + ", Smart TV: " + smartTv);
+    }
 }

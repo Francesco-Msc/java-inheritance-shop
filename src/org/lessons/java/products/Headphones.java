@@ -25,4 +25,8 @@ public class Headphones extends Product {
     public void setCabled(boolean cabled){
         this.cabled = cabled;
     }
+
+    public void headsetDetails(){
+        System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", Colore: " + color + ", Wireless: " + cabled);
+    }
 }
