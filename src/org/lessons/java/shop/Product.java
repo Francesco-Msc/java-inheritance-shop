@@ -48,7 +48,7 @@ public class Product {
     }
 
     //Price foramtted method
-    public String formattedPrice() {
-        return String.format("€ %.2f", this.price + (this.price * this.vat / 100.0));
+    public double formattedPrice() {
+        return this.price + (this.price * this.vat / 100.0);
     }
 }
