@@ -1,15 +1,18 @@
 package org.lessons.java.products;
 
+import org.lessons.java.compositions.Screen;
 import org.lessons.java.shop.Product;
 
 public class Televisions extends Product{
     private int size;
     private boolean smartTv;
+    private Screen screen;
 
-    public Televisions(int code, String name, String brand, double price, int vat, int size, boolean smartTv){
+    public Televisions(int code, String name, String brand, double price, int vat, int size, boolean smartTv, Screen screen){
         super(code, name, brand, price, vat);
         this.size = size;
         this.smartTv = smartTv;
+        this.screen = screen;
     }
 
     public int getSize(){
@@ -28,5 +31,6 @@ public class Televisions extends Product{
 
     public void tvDetails(){
         System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", Pollici: " + size + ", Smart TV: " + smartTv);
+        System.out.println("Schermo:" + screen.getName() + ", refresh rate: " + screen.getHz() + " Hz");
     }
 }
