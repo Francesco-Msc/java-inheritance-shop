@@ -51,4 +51,8 @@ public class Product {
     public double formattedPrice() {
         return this.price + (this.price * this.vat / 100.0);
     }
+
+    public String showDetails(){
+        return "Nome: " + name + " , Marchio: " + brand + ", Prezzo: " + price + ", IVA: " + vat;
+    }
 }

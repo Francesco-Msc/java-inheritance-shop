@@ -40,7 +40,7 @@ public class Cart {
                 Screen screen = new Screen("Super AMOLED", 120);
     
                 Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory, processor,  screen);
-                phone.phoneDetails();
+                System.out.println(phone.showDetails());
                 cartPrice += phone.formattedPrice();
             } else if (typeOfProduct == 2) {
                 System.out.println("Dimensioni prodotto (pollici):");

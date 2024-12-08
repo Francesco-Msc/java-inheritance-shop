@@ -36,9 +36,8 @@ public class Smartphone extends Product {
         this.memory = memory;
     }
 
-    public void phoneDetails(){
-        System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", IMEI: " + imei + ", Memoria: " + memory);
-        System.out.println("Processore: " + processor.getName() + ", Core: " + processor.getCores());
-        System.out.println("Schermo:" + screen.getName() + ", refresh rate: " + screen.getHz() + " Hz");
+    @Override
+    public String showDetails() {
+        return super.showDetails() + ", IMEI: " + imei + ", Memoria: " + memory + ", Processore: " + processor.getName() + ", Cores: " + processor.getCores() + ", Schermo: " + screen.getName() + ", Refresh rate: " + screen.getHz();
     }
 }
