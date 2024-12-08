@@ -6,6 +6,7 @@ import org.lessons.java.products.Headphones;
 import org.lessons.java.products.Smartphone;
 import org.lessons.java.products.Televisions;
 import org.lessons.java.compositions.Processor;
+import org.lessons.java.compositions.Screen;
 
 public class Cart {
     public static void main(String[] args) {
@@ -36,8 +37,9 @@ public class Cart {
                 int memory = input.nextInt();
 
                 Processor processor = new Processor("Snapdragon 888", 8);
+                Screen screen = new Screen("Super AMOLED", 120);
     
-                Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory, processor);
+                Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory, processor,  screen);
                 phone.phoneDetails();
                 cartPrice += phone.formattedPrice();
             } else if (typeOfProduct == 2) {
@@ -45,8 +47,10 @@ public class Cart {
                 int size = input.nextInt();
                 System.out.println("La tv è una Smart tv? true/false");
                 boolean smartTv = input.nextBoolean();
+
+                Screen screen = new Screen("OLED", 50);
     
-                Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv);
+                Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv, screen);
                 tv.tvDetails();
                 cartPrice += tv.formattedPrice();
             } else {
