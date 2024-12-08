@@ -29,8 +29,8 @@ public class Televisions extends Product{
         this.smartTv = smartTv;
     }
 
-    public void tvDetails(){
-        System.out.println("Nome: " + getName() + ", Marchio: " + getBrand() + ", Prezzo: " + getPrice() + ", IVA: " + getVat() + ", Pollici: " + size + ", Smart TV: " + smartTv);
-        System.out.println("Schermo:" + screen.getName() + ", refresh rate: " + screen.getHz() + " Hz");
+    @Override
+    public String showDetails(){
+        return super.showDetails() + ", Dimensioni: " + size + ", Smart TV: " + smartTv + ", Schermo: " + screen.getName() + ", Refresh rate: " + screen.getHz() + " hz";
     }
 }

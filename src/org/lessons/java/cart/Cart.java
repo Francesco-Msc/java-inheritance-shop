@@ -51,7 +51,7 @@ public class Cart {
                 Screen screen = new Screen("OLED", 50);
     
                 Televisions tv = new Televisions(typeOfProduct, name, brand, price, vat, size, smartTv, screen);
-                tv.tvDetails();
+                System.out.println(tv.showDetails());
                 cartPrice += tv.formattedPrice();
             } else {
                 System.out.println("Colore del prodotto");
