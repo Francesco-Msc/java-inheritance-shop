@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.lessons.java.products.Headphones;
 import org.lessons.java.products.Smartphone;
 import org.lessons.java.products.Televisions;
+import org.lessons.java.compositions.Processor;
 
 public class Cart {
     public static void main(String[] args) {
@@ -33,8 +34,10 @@ public class Cart {
                 int imei = input.nextInt();
                 System.out.println("Memoria prodotto (GB): ");
                 int memory = input.nextInt();
+
+                Processor processor = new Processor("Snapdragon 888", 8);
     
-                Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory);
+                Smartphone phone = new Smartphone(typeOfProduct, name, brand, price, vat, imei, memory, processor);
                 phone.phoneDetails();
                 cartPrice += phone.formattedPrice();
             } else if (typeOfProduct == 2) {
